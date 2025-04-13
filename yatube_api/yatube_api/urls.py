@@ -10,6 +10,8 @@ urlpatterns = [
     path("", schema),
     path("admin/", admin.site.urls),
     path("api/v1/api-token-auth/", obtain_auth_token),
+    path('api/v1/', include('djoser.urls')),     #
+    path('api/v1/', include('djoser.urls.jwt')), #
     path("", include("api.urls")),
     path(
         'redoc/',
