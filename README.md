@@ -175,3 +175,36 @@
 1. Клонируйте репозиторий:
    ```bash
    git clone https://github.com/ваш_репозиторий/api_final_yatube.git
+
+2. Перейдите в директорию проекта:
+
+   ```bash 
+   cd api_final_yatube
+
+
+3. Создайте и активируйте виртуальное окружение:
+
+    ```bash 
+    python -m venv venv
+    source venv/bin/activate  # Для Linux/Mac
+    .\venv\Scripts\activate   # Для Windows
+
+4. Установите зависимости:
+
+    ```bash 
+    pip install -r requirements.txt
+
+5. Выполните миграции базы данных:
+
+    ```bash 
+    python manage.py migrate
+
+6. Создайте суперпользователя (опционально, для доступа к админке):
+
+    ```bash 
+    python manage.py createsuperuser
+
+7. Запустите сервер разработки:
+
+    ```bash 
+    python manage.py runserver
