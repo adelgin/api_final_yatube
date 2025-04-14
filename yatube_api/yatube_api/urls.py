@@ -10,8 +10,8 @@ urlpatterns = [
     path("", schema),
     path("admin/", admin.site.urls),
     path("api/v1/api-token-auth/", obtain_auth_token),
-    path('api/v1/', include('djoser.urls')),     #
-    path('api/v1/', include('djoser.urls.jwt')), #
+    path('api/v1/', include('djoser.urls')),
+    path('api/v1/', include('djoser.urls.jwt')),
     path("", include("api.urls")),
     path(
         'redoc/',
@@ -25,5 +25,3 @@ if settings.DEBUG:
                           document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL,
                           document_root=settings.STATIC_ROOT)
-
-
